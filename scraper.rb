@@ -20,7 +20,6 @@ end
 
 def scrape_list(url)
   noko = noko_for(url)
-  binding.pry
   noko.xpath('//h3[span[@id="Mandature_mars_2012_-_2017"]]/following-sibling::table[1]//tr[td]').each do |tr|
     tds = tr.css('td')
     data = { 
